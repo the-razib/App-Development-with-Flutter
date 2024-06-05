@@ -6,7 +6,7 @@ void main() {
   String fullName=firstName+lastName;
   print(fullName);
 
-  print(firstName + ' ' + lastName); // This will print 'Md Razib'
+  print('$firstName $lastName'); // This will print 'Md Razib'
 
   print('My Age is $age'+age.toString());
 
