@@ -3,7 +3,7 @@ import 'main.dart';
 
 void main() {
   //Here we create object/instance
-  Monitor samsung = Monitor();
+  Monitor samsung = Monitor('samsung', 'new-sm454', 34343);
 
   print(samsung.name);
   samsung.name = 'LG';
@@ -11,7 +11,7 @@ void main() {
   print('Monitor name ${samsung.name} \n'
       'Monitor model ${samsung.model}');
 
-  //Now we can method from the monitor class
+  //Now we can use method from the monitor class
   samsung.modelName();
 
   //we can't access the private properties from other file
@@ -19,5 +19,17 @@ void main() {
   /*samsung._internalHardwareNo;
   samsung._internalHardwareNo;
             ^^^^^^^^^^^^^^^^^^^ */
-  
+  samsung.name = 'msi';
+  print(samsung.name);
+
+  // try to change (final) properties value
+  //samsung.displayInfo='8k'; // we can't change the value
+  print(samsung.displayInfo);
+
+  //we can use properties direct using class name (static)
+  Monitor.type;
+  print(Monitor.type);
+
+  // use method that use static keyword
+  print(Monitor.sampleData());
 }
